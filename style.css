@@ -2,11 +2,21 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+a,
+li,
+ul {
     padding: 0;
+    list-style: none;
+    text-decoration: inherit;
+    color: inherit;
 }
 
 /* Main layout */
@@ -17,25 +27,55 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
-    grid-template-areas: 
+    grid-template-areas:
         "sb hd"
         "sb mn";
 }
 
 header {
-    background-color: whitesmoke;
+    background-color: #fff;
     grid-column: 2 / -1;
     grid-row: 1 / 2;
 }
 
 aside {
-    background-color: blue;
+    background-color: #1992d4;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
 }
 
 main {
-    background-color: grey;
+    background-color: #e2e8f0;
     grid-column: 2 / -1;
     grid-row: 2 / -1;
+}
+
+/* Sidebar Section */
+
+aside {
+    color: #fff;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto;
+    gap: 25px;
+    padding: 15px;
+    align-items: flex-start;
+}
+
+.dashboard-title {
+    align-self: center;
+}
+
+nav {
+    display: grid;
+    gap: 25px;
+}
+
+.nav-menu,
+.settings-menu {
+    display: grid;
+    align-items: center;
+    align-content: flex-start;
+    gap: 10px;
 }
