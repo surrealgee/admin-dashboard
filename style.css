@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main layout */
+
+.grid-container {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+        "sb hd"
+        "sb mn";
+}
+
+header {
+    background-color: whitesmoke;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+}
+
+aside {
+    background-color: blue;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+}
+
+main {
+    background-color: grey;
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+}
