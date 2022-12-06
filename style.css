@@ -101,3 +101,76 @@ aside span {
 .dashboard-icon {
     width: 35px;
 }
+
+/* Header Section */
+
+header {
+    padding: 15px 30px;
+    display: grid;
+    grid-template-columns: minmax(400px, 2fr) 1fr;
+    align-items: center;
+    font-weight: 700;
+}
+
+.header-cell {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="text"] {
+    height: 25px;
+    width: 95%;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 25px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.profile-panel {
+    font-size: 36px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.alerts-panel,
+.controls-panel {
+    justify-content: center;
+    gap: 25px;
+}
+
+.profile-pic {
+    width: 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+}
+
+.profile-pic-main {
+    width: 80px;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+}
+
+header span {
+    font-size: 12px;
+}
+
+.search-btn {
+    border: none;
+    background-color: inherit;
+}
+
+header button {
+  background-color: #1992d4;  
+  border: none;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-weight: 600;
+}
