@@ -173,4 +173,49 @@ header button {
   padding: 10px 30px;
   border-radius: 20px;
   font-weight: 600;
+  cursor: pointer;
+}
+
+/* Main Section */
+
+main {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 300px;
+    padding: 25px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
+}
+
+.projects h2 {
+    grid-column: 1 / -1;
+    align-self: center;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px 25px;
+    width: 350px;
+    border-radius: 8px;
+    border-left: 8px solid #f0b429;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.project-card p {
+    color: #636363;
+}
+
+.card-btns {
+    width: 125px;
+    margin: auto 0 0 auto;
+    display: flex;
+    justify-content: space-around;
+
 }
