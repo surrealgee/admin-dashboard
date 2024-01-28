@@ -8,20 +8,119 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* Main Layout */
 
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 150px 1fr;
     min-height: 100vh;
 }
+
+/* Header */
 
 .header {
     background-color: #fff;
     grid-column: 2 / -1;
     grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+    padding: 1em 2em;
+    gap: 1em;
 }
+
+.search_pane {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.search_pane input {
+    background-color: #e2e8f0;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 0.5em 1em;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+}
+
+.header img {
+    max-width: 20px;
+    cursor: pointer;
+}
+
+.profile_pane {
+    display: grid;
+    grid-template-columns: 20px 30px 100px;
+    align-items: center;
+    justify-items: start;
+    gap: 0.75em;
+    justify-content: end;
+}
+
+.profile_picture {
+    width: 30px;
+    height: 30px;
+    background-color: goldenrod;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile_name {
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.greeting_pane {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 25px 1fr;
+    gap: 0 1em;
+    align-items: center;
+    font-weight: 700;
+}
+
+.greeting_pane span {
+    font-size: 0.75rem;
+}
+
+.greeting {
+    width: 50px;
+    height: 50px;
+    grid-row:  1 / -1;
+}
+
+.actions_pane {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 1em;
+    padding: 0.5em 1em;
+}
+
+.actions_pane button {
+    background-color: #1992d4;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0.75em 1.5em;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.actions_pane button:hover {
+    background-color: goldenrod;
+}
+
+/* Sidebar */
 
 .sidebar {
     background-color: #1992d4;
@@ -31,7 +130,7 @@ body {
     grid-row: 1 / -1;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr 6fr;
+    grid-template-rows: 100px 1fr 1fr;
     align-content: start;
     padding: 0 1em;
     gap: 1.5em;
@@ -52,7 +151,7 @@ body {
 }
 
 .sidebar li:hover {
-    color: lightblue;
+    color: goldenrod;
 }
 
 .sidebar li img {
