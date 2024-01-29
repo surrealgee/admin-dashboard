@@ -9,7 +9,15 @@ body {
 }
 
 img {
+    width: 25px;
     max-width: 100%;
+}
+
+/* Typography */
+
+h2 {
+    font-size: 1rem;
+    margin: 0 auto 0.75em;
 }
 
 /* Main Layout */
@@ -166,8 +174,63 @@ img {
     font-size: 1.5rem;
 }
 
+/* Main */
+
 .main {
     background-color: #e2e8f0;
     grid-column: 2 / -1;
     grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 1em;
+    gap: 1em;
 }
+
+.cards {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.projects h2 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    border-left: 5px solid goldenrod;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    height: 175px;
+}
+
+.card_actions {
+    display: flex;
+    gap: 1em;
+    justify-content: end;
+    margin-top: auto;
+}
+
+.card_actions img {
+    width: 20px;
+    cursor: pointer;
+}
+
+ .announcements {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+}
+
+
+.trending {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+}
+
